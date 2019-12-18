@@ -1,8 +1,10 @@
 import React from 'react';
+import WorkExperienceList from '../../DataFiles/workexperiencelist.json';
+import WorkExperienceContainer from './WorkExperienceContainer';
 
 function WorkExperience(props) {
     return (
-        <h1>Projects</h1>
+        <WorkExperienceContainer WorkExperienceList={WorkExperienceList} />
     );
 }
 export default WorkExperience;

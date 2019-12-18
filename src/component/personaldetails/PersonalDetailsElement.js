@@ -5,7 +5,7 @@ function PersonalDetailsElement(props) {
     return (
         <>
             <tr>
-                <th width="30%">{props.personalDetail.key}</th>
+                <th width="30%" className="bg-warning">{props.personalDetail.key}</th>
                 <td>{props.personalDetail.value}</td>
             </tr>
         </>);
