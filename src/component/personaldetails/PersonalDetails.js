@@ -4,7 +4,7 @@ import PersonalDetailsContainer from './PersonalDetailsContainer';
 
 function PersonalDetails(props) {
 
-    const PersonalDetailsList = [
+    const PersonalDetailList = [
         {
             "key": "Name",
             "value": "Himanshu Jain"
