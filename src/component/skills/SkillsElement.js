@@ -3,8 +3,8 @@ import React from 'react';
 function SkillElement(props) {
 
     return (<>
-        <h5><b>{props.skill.key}</b></h5>
-        <p>{props.skill.value}</p>
+        <h5>{props.skill.key}</h5>
+        <h6 className="lighter">{props.skill.value}</h6>
         <br />
     </>)
 }

@@ -1,0 +1,68 @@
+.image{
+    border:1px solid #1ABC9C;
+    border-radius: 100%;
+    width:190px;
+    height:190px;
+}
+
+.aboutme{
+    width: 100%;
+    background: #1ABC9C;
+    box-sizing: border-box;
+    position: relative;
+    color: white;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.aboutme h4{
+    text-align: center;
+    padding: 5px 0;
+    border-bottom: 2px solid;
+}
+
+.aboutme h5{
+    font-weight: lighter;
+}
+
+.aboutme h3{
+    font-weight: normal;
+}
+
+.aboutme h6{
+    font-weight: lighter;
+}
+
+.lighter{
+    font-weight: lighter;
+}
+
+.header h6{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h4{
+font-weight: bold;
+color: #1ABC9C;
+}
+
+.color{
+    color: #1ABC9C;
+}
+
+hr{
+    border: 0.7px solid #1ABC9C;
+}
+
+.container-border{
+    border: 1px solid lightgrey;
+    width: 70%;
+}
+
+.header h5{
+    color: #1ABC9C;
+}
+
+.aright{
+    float:right;
+}

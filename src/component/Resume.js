@@ -1,58 +1,42 @@
 import React, { Component } from 'react';
-import PersonalDetails from './personaldetails/PersonalDetails';
-import Skills from './skills/Skills';
-import WorkExperience from './workexperience/WorkExperience';
-import Header from './Header';
-import Menu from './menu/Menu';
-import DashBoard from './DashBoard';
-import Education from './education/Education';
+import DashBoardLeft from './Dashboard/DashBoardLeft';
+import DashBoardRight from './Dashboard/DashBoardRight';
 import { Container, Row, Col } from 'react-bootstrap';
 import Switch, { Case } from 'react-switch-case';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
+import WorkExperience from './workexperience/WorkExperience';
+import Skills from './skills/Skills';
+import Education from './education/Education';
+import DashboardAboutMe from './Dashboard/DashboardAboutMe';
+import { FaHome } from 'react-icons/fa';
 
 class Resume extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            activeKey: 'dashboard'
-        }
+    constructor() {
+        super();
+        this.state = { screen: "dashboard" };
         this.setEvent = this.setEvent.bind(this);
     }
 
-    setEvent(eventName) {
-        console.log(eventName);
-        this.setState({ activeKey: eventName });
+    setEvent = (eventName) => {
+        this.setState({ screen: eventName });
+    };
 
-    }
     render() {
         return (
-            <Container>
+            <Container className="container-border">
                 <br />
-                <Header />
-                <hr />
                 <Row className="justify-content-md-center">
                     <Col lg={3}>
-                        <Menu event={this.setEvent} activeKey={this.state.activeKey} />
+                        <DashBoardLeft event={this.setEvent} />
                     </Col>
-                    <Col lg={7}>
-                        <Switch condition={this.state.activeKey}>
-                            <Case value="dashboard">
-                                <DashBoard />
-                            </Case>
-                            <Case value="workexperience">
-                                <WorkExperience />
-                            </Case>
-                            <Case value="skills">
-                                <Skills />
-                            </Case>
-                            <Case value="education">
-                                <Education />
-                            </Case>
-                            <Case value="personaldetails">
-                                <PersonalDetails />
-                            </Case>
+                    <Col lg={9}>
+                        <DashboardAboutMe />
+                        <a href="/" onClick={() => this.setEvent("dashboard")} className="aright"><FaHome /></a>                        <br />
+                        <Switch condition={this.state.screen}>
+                            <Case value="dashboard"><DashBoardRight event={this.setEvent} /></Case>
+                            <Case value="workexperience"><WorkExperience /></Case>
+                            <Case value="skills"><Skills /></Case>
+                            <Case value="education"><Education /></Case>
                         </Switch>
                     </Col>
                 </Row>

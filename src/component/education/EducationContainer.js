@@ -1,13 +1,16 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
 import EducationElement from './EducationElement';
+import { FaGraduationCap } from 'react-icons/fa';
 
 function EducationContainer(props) {
-    const educationList = props.educationList.map(education => <EducationElement education={education} />);
+    const educationList = props.educationList.map(education => <><EducationElement education={education} /> <br /></>);
     return (
-        <Container>
+        <div>
+            <h4>EDUCATION <FaGraduationCap /></h4>
+            <hr />
             {educationList}
-        </Container>
+            <br />
+        </div>
     );
 }
 
