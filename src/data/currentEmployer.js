@@ -1,4 +1,4 @@
 export const currentEmployer = {
-    employerName: 'Tata Consultancy Services',
-    duration: '12/2012 - Present'
+    employerName: 'Publicis Sapient',
+    duration: '10/2020 - Present'
 }
